@@ -8,7 +8,6 @@
 <p>Hello Telega!</p>
 <script>
   let tg = window.Telegram.WebApp;
-  tg.expand();
   function webviewClose() {
     tg.close();
   }
@@ -16,6 +15,7 @@
   .setcolor('#2cab37')
   .setTextColor('#FFFFFF')
   .setText('CLOSE WEBVIEW')
+  .isVisible()
   .show()
   .onClick(function () {
     webviewClose();
