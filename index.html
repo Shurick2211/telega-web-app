@@ -11,7 +11,7 @@
   function webviewClose() {
     Telegram.WebApp.close();
   }
-
+  $('body').css('visibility', '');
   Telegram.WebApp.MainButton
   .setText('CLOSE WEBVIEW')
   .show()
