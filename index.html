@@ -7,12 +7,14 @@
 <body>
 <p>Hello Telega!</p>
 <script>
-  Telegram.WebApp.ready();
+  let tg = window.Telegram.WebApp;
+  tg.expand();
   function webviewClose() {
-    Telegram.WebApp.close();
+    tg.close();
   }
-  $('body').css('visibility', '');
-  Telegram.WebApp.MainButton
+  tg.MainButton
+  .setcolor('#2cab37')
+  .setTextColor('#FFFFFF')
   .setText('CLOSE WEBVIEW')
   .show()
   .onClick(function () {
