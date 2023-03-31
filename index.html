@@ -8,6 +8,12 @@
 <p>Hello Telega!</p>
 <script>
   Telegram.WebApp.ready();
+  Telegram.WebApp.MainButton
+  .setText('CLOSE WEBVIEW')
+  .show()
+  .onClick(function () {
+    webviewClose();
+  });
 </script>
 </body>
 </html>
