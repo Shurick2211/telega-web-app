@@ -5,9 +5,11 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-<h2 id="h">Hello Telega!</h2>
-<input type="text" id="in">
-<p id="hh">Hello user!</p>
+<h3 >Api key!</h3>
+<input type="text" id="in1">
+<h3 >Api secret!</h3>
+<input type="text" id="in2">
+<p id="pteg">Hello user!</p>
 <button id="ok" onclick="clickOK()">OK</button>
 <script>
   let tg = window.Telegram.WebApp;
@@ -20,9 +22,10 @@
   }
 
   function clickOK() {
-    let h = document.getElementById("h");
-    var input = document.getElementById("in");
-    h.innerText=input.value;
+    let hh = document.getElementById("pteg");
+    var input1 = document.getElementById("in1");
+    var input2 = document.getElementById("in2");
+    hh.innerText=input1.value + "  " + input2.value;
   }
 
   tg.MainButton.isVisible=true;
