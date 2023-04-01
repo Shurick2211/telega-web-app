@@ -14,16 +14,15 @@
   function webviewClose() {
     tg.close();
   }
+  tg.MainButton.isVisible=true;
+  tg.MainButton.text='MainButton';
+  tg.MainButton.color='#2cab37';
+  tg.MainButton.textColor='#FFFFFF';
+  tg.MainButton.show();
 
-  tg.MainButton
-  .setVisible(true)
-  .setcolor('#2cab37')
-  .setTextColor('#FFFFFF')
-  .setText('CLOSE WEBVIEW')
-  .show()
-  .onClick(function () {
-    webviewClose();
-  });
+
+
+
 </script>
 </body>
 </html>
