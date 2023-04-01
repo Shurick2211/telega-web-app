@@ -14,11 +14,17 @@
   function webviewClose() {
     tg.close();
   }
+
+  function clickMain() {
+    tg.close();
+  }
+
   tg.MainButton.isVisible=true;
   tg.MainButton.text='MainButton';
   tg.MainButton.color='#2cab37';
   tg.MainButton.textColor='#FFFFFF';
   tg.MainButton.show();
+  tg.MainButton.onClick(clickMain());
 
 
 
