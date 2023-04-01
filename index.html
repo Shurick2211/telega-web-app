@@ -5,7 +5,7 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-<p id="tegP">Hello Telega!</p>
+<h2 id="h">Hello Telega!</h2>
 <button id="ok" onclick="clickOK()">OK</button>
 <script>
   let tg = window.Telegram.WebApp;
@@ -18,8 +18,8 @@
   }
 
   function clickOK() {
-    let p = document.getElementById('tegP');
-    p.text="Ha-ha!";
+    let h = document.getElementById("h");
+    h.innerText=initData;
   }
 
   tg.MainButton.isVisible=true;
