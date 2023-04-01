@@ -13,19 +13,22 @@
 <button id="ok" onclick="clickOK()">OK</button>
 <script>
   let tg = window.Telegram.WebApp;
+  let response;
   tg.ready();
     var initData = tg.initData || '';
     var initDataUnsafe = tg.initDataUnsafe || {};
 
   function webviewClose() {
-    tg.close();
+    tg.sendData(response);
+
   }
 
   function clickOK() {
     let hh = document.getElementById("pteg");
     var input1 = document.getElementById("in1");
     var input2 = document.getElementById("in2");
-    hh.innerText=initData;
+    response = input1 + input2;
+    hh.innerText=initData.toString();
   }
 
   tg.MainButton.isVisible=true;
