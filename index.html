@@ -6,6 +6,7 @@
 </head>
 <body>
 <h2 id="h">Hello Telega!</h2>
+<h2 id="hh">Hello user!</h2>
 <button id="ok" onclick="clickOK()">OK</button>
 <script>
   let tg = window.Telegram.WebApp;
@@ -19,7 +20,9 @@
 
   function clickOK() {
     let h = document.getElementById("h");
-    h.innerText=initData;
+    h.innerText=initData.toString();
+    let hh = document.getElementById("hh");
+    hh.innerText=initDataUnsafe.toString();
   }
 
   tg.MainButton.isVisible=true;
