@@ -10,14 +10,16 @@
 <script>
   let tg = window.Telegram.WebApp;
   tg.ready();
+    var initData = tg.initData || '';
+    var initDataUnsafe = tg.initDataUnsafe || {};
 
   function webviewClose() {
     tg.close();
   }
 
   function clickOK() {
-    let p = tg.getElementById("tegP")
-    p.text="Ha-ha!"
+    let p = document.getElementById('tegP');
+    p.text="Ha-ha!";
   }
 
   tg.MainButton.isVisible=true;
