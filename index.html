@@ -19,8 +19,8 @@
     var initDataUnsafe = tg.initDataUnsafe || {};
 
   function webviewClose() {
-    sendData(response);
-
+    tg.sendData(response);
+    tg.close();
   }
 
   function clickOK() {
