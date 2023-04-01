@@ -5,8 +5,8 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-<p>Hello Telega!</p>
-<button id="ok" onclick="webviewClose()">OK</button>
+<p id="tegP">Hello Telega!</p>
+<button id="ok" onclick="clickOK()">OK</button>
 <script>
   let tg = window.Telegram.WebApp;
   tg.ready();
@@ -15,8 +15,9 @@
     tg.close();
   }
 
-  function clickMain() {
-    tg.close();
+  function clickOK() {
+    let p = document.getElementById("tegP")
+    p.text="Ha-ha!"
   }
 
   tg.MainButton.isVisible=true;
@@ -24,7 +25,7 @@
   tg.MainButton.color='#2cab37';
   tg.MainButton.textColor='#FFFFFF';
   tg.MainButton.show();
-  tg.MainButton.onClick(clickMain);
+  tg.MainButton.onClick(webviewClose);
 
 
 
