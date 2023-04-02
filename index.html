@@ -12,13 +12,13 @@
 <p id="pteg">Hello user! </p>
 <button id="ok" onclick="clickOK()">OK</button>
 <script>
-  let hh = document.getElementById("pteg");
+
   let tg = window.Telegram.WebApp;
   let response;
   tg.ready();
     var initData = tg.initData || '';
     var initDataUnsafe = tg.initDataUnsafe || {};
-    hh.innerText += initDataUnsafe.user.name;
+
 
   function webviewClose() {
     tg.sendData(response.toString());
@@ -28,13 +28,14 @@
     api_secret;
   }
   function clickOK() {
+    let disp = document.getElementById("pteg");
     var input1 = document.getElementById("in1");
     var input2 = document.getElementById("in2");
     const resp = new Resp();
     resp.api_key = input1.value;
     resp.api_secret = input2.value;
     response = JSON.stringify(resp);
-    this.hh.innerText = response;
+    disp.innerText = response;
   }
 
   tg.MainButton.isVisible=true;
