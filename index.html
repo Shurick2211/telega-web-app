@@ -15,6 +15,9 @@
   class Resp{
     in1;
     in2;
+    toString(){
+      return this.in1+this.in2;
+    }
   }
   let tg = window.Telegram.WebApp;
   let response = new Resp();
@@ -23,7 +26,7 @@
     var initDataUnsafe = tg.initDataUnsafe || {};
 
   function webviewClose() {
-    tg.sendData(response);
+    tg.sendData(response.toString());
   }
 
   function clickOK() {
