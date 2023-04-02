@@ -12,23 +12,27 @@
 <p id="pteg">Hello user!</p>
 <button id="ok" onclick="clickOK()">OK</button>
 <script>
+  class Resp{
+    in1;
+    in2;
+  }
   let tg = window.Telegram.WebApp;
-  let response;
+  let response = new Resp();
   tg.ready();
     var initData = tg.initData || '';
     var initDataUnsafe = tg.initDataUnsafe || {};
 
   function webviewClose() {
     tg.sendData(response);
-    tg.close();
   }
 
   function clickOK() {
     let hh = document.getElementById("pteg");
     var input1 = document.getElementById("in1");
     var input2 = document.getElementById("in2");
-    response = input1.value.toString() + input2.value.toString();
-    hh.innerText=response;
+    response.in1 = input1.value;
+    response.in2 = input2.value;
+    hh.innerText=response.toString();
   }
 
   tg.MainButton.isVisible=true;
