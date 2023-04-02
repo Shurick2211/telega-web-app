@@ -32,8 +32,8 @@
     var input1 = document.getElementById("in1");
     var input2 = document.getElementById("in2");
     const resp = new Resp();
-    resp.api_key = input1.value;
-    resp.api_secret = input2.value;
+    resp.api_key = input1.value.toString();
+    resp.api_secret = input2.value.toString();
     response = JSON.stringify(resp);
     disp.innerText = response;
   }
