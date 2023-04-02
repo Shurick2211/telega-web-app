@@ -12,15 +12,9 @@
 <p id="pteg">Hello user!</p>
 <button id="ok" onclick="clickOK()">OK</button>
 <script>
-  class Resp{
-    in1;
-    in2;
-    toString(){
-      return this.in1+this.in2;
-    }
-  }
+
   let tg = window.Telegram.WebApp;
-  let response = new Resp();
+  let response;
   tg.ready();
     var initData = tg.initData || '';
     var initDataUnsafe = tg.initDataUnsafe || {};
@@ -33,9 +27,8 @@
     let hh = document.getElementById("pteg");
     var input1 = document.getElementById("in1");
     var input2 = document.getElementById("in2");
-    response.in1 = input1.value;
-    response.in2 = input2.value;
-    hh.innerText=response.toString();
+    response = input1.value.toString() + input2.value.toString();
+    hh.innerText = response;
   }
 
   tg.MainButton.isVisible=true;
