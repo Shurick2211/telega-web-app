@@ -50,15 +50,13 @@
       resp.api_secret = secret.value.toString();
       response = JSON.stringify(resp);
       disp.innerText = response;
-      tg.MainButton.isVisible=true;
+      tg.MainButton.show();
     }
   }
 
-  tg.MainButton.isVisible=false;
   tg.MainButton.text='Registration';
   tg.MainButton.color='#2cab37';
   tg.MainButton.textColor='#FFFFFF';
-  tg.MainButton.show();
   tg.MainButton.onClick(webviewClose);
 
   key.addEventListener("focusout", keyIsNotEmpty);
